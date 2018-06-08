@@ -21,9 +21,9 @@
     				{{#unless this.devoured}}
 					<li class="list-group-item">
 						<p class="burger-name">{{this.name}}</p>
-						<form class="pull-right change-devour" action="/{{this.id}}?_method=PUT" method="PUT">
+						<form class="pull-right">
           					<input type="hidden" name="devoured" value="true">
-          					<button class="btn btn-default btn-danger" data-id = "{{id}}" type="submit">Eat!</button>
+          					<button class="btn btn-default btn-danger devour" data-id="{{id}}">Eat!</button>
         				</form>
         			</li>
         			{{/unless}}

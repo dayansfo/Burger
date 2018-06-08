@@ -1,6 +1,6 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-  $(".change-devour").on("click", function(event) {
+  $(".devour").on("click", function(event) {
     var id = $(this).data("id");
 
     // Send the PUT request.
@@ -16,13 +16,13 @@ $(function() {
     );
   });
 
-  $(".burger").on("submit", function(event) {
+  $(".burger").on("click", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
     // debugger;
 
     var newBurger = {
-      name: $("#ca").val().trim(),
+      name: $("#burgerInput").val().trim(),
       devour: 0
     };
 
